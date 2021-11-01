@@ -18,9 +18,10 @@ import { Optional } from '@angular/core';
              }),
          ],{ optional: true }),
          query(':enter,:leave',[
-          animate('600ms ease', style({
+          animate('900ms ease', style({
                 opacity:1,
-                transform:'scale(0.2) translateY(0)'
+                width:'100%',
+                transform:'scale(0.1) translateY(0)'
             }))  
         ],{ optional: true }),
      ])

@@ -6,29 +6,29 @@ import { Tab2Component } from './tab2/tab2.component';
 import { Tab3Component } from './tab3/tab3.component';
 
 const routes: Routes = [
-  {
+  { 
     path: 'home'
-    , component: HomeComponent,
-    data: { animation: 'home' }
-
-  },
-  {
+  , component: HomeComponent,
+  data:{animation:'home'}
+  
+},
+  { 
     path: 'tab'
-    , component: TabComponent,
-    data: { animation: 'tab' }
-
-  },
+  , component: TabComponent,
+  data:{animation:'tab'}
+  
+},
   {
-    path: 'tab2',
-    component: Tab2Component
-    ,
-    data: { animation: 'tab2' }
-
-  },
-  {
-    path: 'tab3',
-    component: Tab3Component,
-    data: { animation: 'tab3' }
+     path: 'tab2', 
+     component: Tab2Component 
+     ,
+  data:{animation:'tab2'}
+    
+    },
+  { 
+    path: 'tab3', 
+    component: Tab3Component ,
+  data:{animation:'tab3'}
 
   }
 
@@ -38,8 +38,8 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
+export class AppRoutingModule { 
 
 
-
+  
 }

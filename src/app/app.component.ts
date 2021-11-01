@@ -9,6 +9,7 @@ import {
   transition,
   // ...
 } from '@angular/animations';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -18,13 +19,15 @@ import {
     fader
     // animation triggers go here
     //slider
-  ]
+  ],
+  providers:[HttpClient]
 })
 export class AppComponent {
+  events: string[] = [];
+  opened!: boolean;
+  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+
   @HostBinding('@.disabled')
-  imgProfile!:string; 
-  imgMainIcon!:string;
-    
   public animationsDisabled = false;
   title = 'editemp';
   profileLinkImg= 'https://th.bing.com/th/id/R.05a20518e749191c457d4122a9ff14b4?rik=TVEe1rRKvh9ysQ&riu=http%3a%2f%2fimagebank.biz%2fwp-content%2fuploads%2f2014%2f08%2f163163.jpg&ehk=BKQLp2dsHN25%2bACHc7DzsVlvvMQdkDjetsm8FqaJ7KI%3d&risl=&pid=ImgRaw&r=0'

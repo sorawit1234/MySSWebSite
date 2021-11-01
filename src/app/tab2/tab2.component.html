@@ -1,36 +1,120 @@
 <p>tab2 works!</p>
 <!-- create -->
-<mat-card>
-    <mat-card-title>Create Tempalte</mat-card-title>
+<div [formGroup]="data">
+  <mat-card>
+    <mat-card-title>Choose Tempalte</mat-card-title>
     <div class="row">
-            <mat-card class="mat-cardinner">
-            <mat-card-subtitle>select block</mat-card-subtitle>
-            <mat-card-actions>
-            </mat-card-actions>
-          </mat-card>
-      
-     <br>
-            <mat-card class="mat-cardinner">
-                <mat-card-subtitle>drop block</mat-card-subtitle>
-            <mat-card-actions>
-            </mat-card-actions>
-          </mat-card>
-        </div>
-   
+      <mat-card class="mat-cardinner">
+
+
+        <mat-card-subtitle>Select Template</mat-card-subtitle>
+        <mat-card class="mat-cardinner">
+          <mat-card-actions>
+            <div class="row">
+
+
+              <div class="col-md-8">
+                <div class="card" style="width: 18rem;">
+
+                  <img class="card-img-top" src="..." alt="Card image cap">
+                  <div class="card-body">
+                    <h1 class="card-title">Card Matterial</h1>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <button type="button" (click)="chooseTemplate(1)" class="btn btn-warning">เลือกTemplateนี้</button>
+              </div>
+
+            </div>
+
+          </mat-card-actions>
+        </mat-card>
+        <Br>
+        <mat-card-subtitle>Text</mat-card-subtitle>
+        <mat-card class="mat-cardinner">
+          <mat-card-actions>
+            <B>Text Tempalte:</B>
+            <input type="text-area" formControlName="tempalateText" class="form-control" />
+          </mat-card-actions>
+
+        </mat-card>
+      </mat-card>
+    </div>
+
     <mat-card-actions>
     </mat-card-actions>
   </mat-card>
-<br>
-<!-- preview -->
+  <br>
+  <mat-card>
+    <mat-card-title>Create Tempalte</mat-card-title>
+    <div class="row">
+      <mat-card class="mat-cardinner">
+
+
+        <mat-card-subtitle>Button</mat-card-subtitle>
+        <mat-card class="mat-cardinner">
+          <mat-card-actions>
+            <button type="button" (click)="setButton('btn btn-primary','btn')" class="btn btn-primary"
+              disable>button<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-app" viewBox="0 0 16 16">
+                <path
+                  d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z" />
+              </svg></button>
+            <button type="button" (click)="setButton('btn btn-danger','btn')" class="btn btn-danger" disable>button<svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-app"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z" />
+              </svg></button>
+            <button type="button" (click)="setButton('btn btn-warning','btn')" class="btn btn-warning"
+              disable>button<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-app" viewBox="0 0 16 16">
+                <path
+                  d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z" />
+              </svg></button>
+            <button type="button" (click)="setButton('btn btn-dark','btn')" class="btn btn-dark" disable>button<svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-app"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z" />
+              </svg></button>
+          </mat-card-actions>
+        </mat-card>
+        <Br>
+        <mat-card-subtitle>Text</mat-card-subtitle>
+        <mat-card class="mat-cardinner">
+          <mat-card-actions>
+            <B>Text Button:</B>
+            <input type="text-area" formControlName="text" class="form-control" />
+          </mat-card-actions>
+
+        </mat-card>
+      </mat-card>
+    </div>
+
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
+
+  <br>
+
+  <!-- preview -->
   <mat-card>
     <mat-card-title>Preview</mat-card-title>
     <mat-card class="mat-cardinner">
-        <mat-card-subtitle>Start</mat-card-subtitle>
-        <mat-card-actions>
-        </mat-card-actions>
-      </mat-card>
+      <mat-card-subtitle>Start</mat-card-subtitle>
+      <mat-card-actions>
+        <textarea type="text-area" formControlName="innerHtml" class="form-control"></textarea>
+      </mat-card-actions>
+    </mat-card>
     <mat-card-actions>
     </mat-card-actions>
   </mat-card>
-  
- 
+  <button type="button" (click)="DisplayModal()" class="btn btn-primary" disable>Excute</button>
+  <button type="button" (click)="clearHtml()" class="btn btn-danger" disable>Clear</button>
+  <!-- //<button type="button" (click)="clearHtml()" class="btn btn-danger" ;>Clear</button> -->
+</div>

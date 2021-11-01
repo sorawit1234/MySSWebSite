@@ -2,9 +2,8 @@
 
 
 <!-- Toolbar -->
-https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.6435-9/246935072_4345647638886300_5059727162927432438_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeGPNQ0HbmrCzVwy2hRwNedey7Qft9Rede_LtB-31F517xIn3OORWdLzDi884qkDZTp_utGKHbvRnX2n4EoIZuNH&_nc_ohc=gflzT17A3TUAX8VZ8UO&_nc_ht=scontent.fbkk5-5.fna&oh=d6e39e0724fc3696c5d7681cdc0fea67&oe=61963FF4
 <div class="titlebar">
-  <img width="5%" alt="Angular Logo"
+  <img width="3%" alt="Angular Logo"
     src="https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.6435-9/247353007_4345634438887620_7496879000808529941_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeF0y2DSkU5OUBvtZ6VCFyOn5Xcxs0RlUtTldzGzRGVS1BAya2Rwybpq3dil6fWslihA50yiWetCp5qcX1dcsOrr&_nc_ohc=oUUfcPJO9QcAX9_itnP&_nc_ht=scontent.fbkk5-5.fna&oh=2d21fea33489842b9c6d37ab6a0aa92c&oe=61946B79" />
 
   <img width="15%" alt="Angular Logo"
@@ -12,7 +11,7 @@ https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.6435-9/246935072_4345647638886300_50
 
 </div>
 
-<div class="sidebar">
+<div class="sidebar" style="border: none;">
   <div class="tab">
     <button class="tablinks" [routerLink]="'home'">
       <span class="iconbtn">
@@ -20,7 +19,7 @@ https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.6435-9/246935072_4345647638886300_50
           <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
         </svg>
   </span>
-      <span class="fontbtn" >Home</span>
+      <span class="fontbtn">Home</span>
     </button>
     <button class="tablinks" [routerLink]="'/tab'" >
       <span class="iconbtn">
@@ -52,9 +51,11 @@ https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.6435-9/246935072_4345647638886300_50
   </div>
 </div>
 
+
 <div class="content" role="main">
   <div [@routeAnimations]="prepareRoute(outlet)">
     <router-outlet #outlet="outlet"></router-outlet>
   </div>
 </div>
+
 
